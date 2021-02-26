@@ -35,7 +35,9 @@ const Repository = () => {
           <header>
             <img src={repository.owner.avatar_url} alt={repository.owner.login} />
             <div>
-              <strong>{repository.full_name}</strong>
+              <a key={repository.id} href={repository.html_url} target="_blank">
+                <strong>{repository.full_name}</strong>
+              </a>
               <p>{repository.description}</p>
             </div>
           </header>
